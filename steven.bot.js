@@ -1,7 +1,7 @@
 let steven = {
-    bot(init = () => {}, callback = () => {}, timeout = 600000, config = {}) {
+    bot(init = () => {}, callback = () => {}, interval = 600000, config = {}) {
         let refreshCount = localStorage.getItem('steven.bot.' + config.name.toLowerCase() + '.refreshes') || 0;
-        let delay = Math.random() * 5000 + timeout;
+        let delay = Math.random() * 5000 + interval;
         const refresh = () => {
             callback();
             setTimeout(() => {
