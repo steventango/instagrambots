@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         InstaLike
-// @namespace    https://github.com/TangSteven/InstagramBots
+// @namespace    https://github.com/steventango/InstagramBots
 // @version      2.2.7
 // @description  Like bot for Instagram
 // @author       Steven Tang
