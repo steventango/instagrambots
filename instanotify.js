@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         InstaNotify
-// @namespace    https://github.com/TangSteven/InstagramBots
+// @namespace    https://github.com/steventango/InstagramBots
 // @version      1.0.0
 // @description  Notifications without following bot for Instagram
 // @author       Steven
