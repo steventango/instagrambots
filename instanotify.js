@@ -9,7 +9,7 @@
 // ==/UserScript==
 
 function instanotify() {
-    var old_posts = localStorage.getItem('steven.bot.instafollow.posts') || 0;
+    var old_posts = localStorage.getItem('steven.bot.instanotify.posts') || 0;
     var current_posts = Number.parseInt(document.querySelector('main header section ul span span').textContent);
     if (old_posts != current_posts) {
         var notify;
@@ -22,7 +22,7 @@ function instanotify() {
                 this.close();
             };
         }
-        localStorage.setItem('steven.bot.instafollow.posts', current_posts);
+        localStorage.setItem('steven.bot.instanotify.posts', current_posts);
     }
 }
 steven.bot(() => {
@@ -31,7 +31,7 @@ steven.bot(() => {
     }
 }, instanotify, 600000, {
     name: 'InstaNotify',
-    version: '1.0.0',
+    version: '1.0.1',
     reload: true,
     reload_url: 'https://www.instagram.com/'
 });
