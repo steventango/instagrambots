@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         InstaNotify
-// @namespace    https://github.com/steventango/InstagramBots
-// @version      1.0.0
+// @namespace    https://github.com/steventango/instagrambots
+// @version      1.0.1
 // @description  Notifications without following bot for Instagram
 // @author       Steven
 // @match        https://www.instagram.com/username/
@@ -26,7 +26,6 @@ function instanotify() {
     }
 }
 steven.bot(() => {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
     if (Notification.permission !== 'denied' || Notification.permission !== 'granted') {
         Notification.requestPermission();
     }
