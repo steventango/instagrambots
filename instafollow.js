@@ -1,5 +1,6 @@
 // ==UserScript==
 // @name         InstaFollow
+// @namespace    https://github.com/steventango/instagrambots
 // @version      2.2.0
 // @description  Like bot for Instagram
 // @author       Steven
