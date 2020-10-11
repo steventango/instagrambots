@@ -1,10 +1,12 @@
 # InstagramBots
 ## Usage
-1. Download a userscript manager (for example, [Tampermonkey](https://www.tampermonkey.net/Tampermonkey]))
-2. For instalike.user.js, instanotify.user.js, and instafollow.user.js:
-    - Click the Install with userscript manager links below.
-    - Configure scripts as necessary in the userscript manager.
-3. For instacompare.js and instadownload.js, open instagram website and paste the source code into your browser's JavaScript developer console.
+- For instalike.user.js, instanotify.user.js, and instafollow.user.js:
+    1. Download a userscript manager (for example, [Tampermonkey](https://www.tampermonkey.net/Tampermonkey]))
+    2. Click the Install with userscript manager links below.
+    3. Configure scripts as necessary in the userscript manager.
+- For instacompare.js and instadownload.js:
+    1. Open the Instagram website.
+    2. Paste the source code into your browser's JavaScript developer console.
 
 ## steven.bot.js
 This modular script can be used to create any web bot. It is configurable, induces human-like randomness into the interval, accounts for network connection, and tracks bot statistics.
