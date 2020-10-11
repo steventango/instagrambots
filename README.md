@@ -1,4 +1,11 @@
 # InstagramBots
+## Usage
+1. Download a Userscript Manager (for example, [Tampermonkey](https://www.tampermonkey.net/Tampermonkey]))
+2. Select the script file you wish to use from this repository and click the Raw button at the top of the file to view its source.
+3. Copy the source.
+4. Open Tampermonkey and click the "Add Script" button.
+5. Paste the source code into the script window and save.
+
 ## steven.bot.js
 This modular script can be used to create any web bot. It is configurable, induces human-like randomness into the interval, accounts for network connection, and tracks bot statistics.
 
@@ -20,10 +27,10 @@ config = {
 }
 ```
 ## instalike.js
-This userscript depends upon steven.bot.js and is as an Instagram like bot that automatically likes posts in your feed. It features include a blacklist, notifications, and statistics on the number of posts liked. 
+This userscript depends upon steven.bot.js and is as an Instagram like bot that automatically likes posts in your feed. It features include a blacklist, notifications, and statistics on the number of posts liked.
 
 ## instanotify.js
-This userscript depends upon steven.bot.js and allows one to be notified when a public account posts without requiring you to follow that account.  
+This userscript depends upon steven.bot.js and allows one to be notified when a public account posts without requiring you to follow that account.
 
 ## instafollow.js
 This userscript depends upon stevven.bot.js and will continually attempt to send follow requests to an account on Instagram.
