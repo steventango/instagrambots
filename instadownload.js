@@ -1,17 +1,42 @@
+async function download(url, filename=null) {
+    if (!filename) {
+        filename = new URL(url).pathname.split('/').pop();
+    }
+    const response = await fetch(url);
+    const blob = await response.blob();
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = filename;
+    link.click();
+}
+
 function instadownload() {
-    var images = document.querySelectorAll("article img");
-    var videos = document.querySelectorAll("article video");
-    var blockers = document.querySelectorAll('div._9AhH0')
-    for (var b = 0; b < blockers.length; b++) {
-        blockers[b].parentNode.removeChild(blockers[b]);
+    const images = document.querySelectorAll("img:not(.instadownload)");
+    const blockers = document.querySelectorAll(
+        [
+            'div._aagw',
+            'div._ab8w._ab94._ab97._ab9h._ab9m._ab9p._ab9s._abcf._abcg._abck._abcl._abcm',
+            'div._aakh',
+            'div._aakl'
+        ].join(", ")
+    );
+    const videos = document.querySelectorAll("video");
+    for (const blocker of blockers) {
+        blocker.parentNode.removeChild(blocker);
     }
-    for (var i = 0; i < images.length; i++) {
-        images[i].outerHTML = '<a href="' + images[i].src + '"target="_blank" >' + images[i].outerHTML + '</a>';
+    for (const image of images) {
+        image.addEventListener("dblclick", () => {
+            download(image.src);
+        });
+        image.classList.add('instadownload');
     }
-    for (var v = 0; v < videos.length; v++) {
-        var a = document.createElement('a');
-        videos[v].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.appendChild(a);
-        a.outerHTML = '<a href="' + videos[v].src + '"target="_blank" >' + videos[v].src + '</a>';
+    for (const video of videos) {
+        video.addEventListener("dblclick", () => {
+            download(video.querySelector('source').src);
+        });
+        video.classList.add('instadownload');
     }
 }
+
 instadownload();
+setInterval(instadownload, 1000);
