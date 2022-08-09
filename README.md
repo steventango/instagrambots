@@ -46,8 +46,5 @@ Install with userscript manager: [instafollow.user.js](https://raw.githubusercon
 ## instacompare.js
 This script is used to automatically determine who is following you back, who isn't, and who you are not following back.
 
-## instadownload.js
-The script makes it simple to download photos and videos off of Instagram posts. Simply click photos and it will open in a new tab.
-```javascript
-var blockers = document.querySelectorAll('div._9AhH0') // use inspect element's element picker (CTRL + SHIFT + C) on the photos to find the classname.
-```
+## instadownload.user.js
+The script makes it simple to download photos and videos off of Instagram posts. Simply CTRL + click photos and it will download them.
