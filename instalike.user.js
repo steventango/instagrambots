@@ -1,12 +1,15 @@
 // ==UserScript==
 // @name         InstaLike
-// @version      2.4.0
+// @version      2.5.0
 // @description  Like bot for Instagram
 // @author       Steven
 // @match        https://www.instagram.com
-// @require      https://steventang.tk/bot/steven.bot.js
+// @require      https://cdn.jsdelivr.net/gh/steventango/instagrambots@latest/steven.bot.js
 // ==/UserScript==
-const BLACK_LIST = ["USERNAME"];
+const BLACK_LIST = [
+  "USERNAME",
+  "shop"
+];
 
 function getParent(like_element) {
   let parent = like_element;
@@ -82,7 +85,7 @@ steven.bot(
   900000,
   {
     name: "InstaLike",
-    version: "2.4.0",
+    version: "2.5.0",
     reload: true,
     reload_url: "https://www.instagram.com",
   }

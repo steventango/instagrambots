@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         InstaNotify
 // @namespace    https://github.com/steventango/instagrambots
-// @version      1.0.1
+// @version      1.1.0
 // @description  Notifications without following bot for Instagram
 // @author       Steven
 // @match        https://www.instagram.com/username/
-// @require      https://steventang.tk/bot/steven.bot.js
+// @require      https://cdn.jsdelivr.net/gh/steventango/instagrambots@latest/steven.bot.js
 // ==/UserScript==
 
 function instanotify() {
@@ -31,7 +31,7 @@ steven.bot(() => {
     }
 }, instanotify, 600000, {
     name: 'InstaNotify',
-    version: '1.0.1',
+    version: '1.1.0',
     reload: true,
     reload_url: 'https://www.instagram.com/'
 });

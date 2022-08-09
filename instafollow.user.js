@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         InstaFollow
 // @namespace    https://github.com/steventango/instagrambots
-// @version      2.2.0
+// @version      2.3.0
 // @description  Like bot for Instagram
 // @author       Steven
 // @match        https://www.instagram.com/username/
-// @require      https://steventang.tk/bot/steven.bot.js
+// @require      https://cdn.jsdelivr.net/gh/steventango/instagrambots@latest/steven.bot.js
 // ==/UserScript==
 steven.bot(() => {
     document.body.scrollTop = document.documentElement.scrollTop = 0;
@@ -31,7 +31,7 @@ steven.bot(() => {
     }
 }, 600000, {
     name: 'InstaFollow',
-    version: '2.2.0',
+    version: '2.3.0',
     reload: true,
     reload_url: 'https://instagram.com'
 });
