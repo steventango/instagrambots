@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         InstaDownload
-// @version      0.0.1
+// @version      0.0.2
 // @description  Download tool for Instagram
 // @author       Steven
 // @match        https://www.instagram.com/*
@@ -35,7 +35,7 @@ function instadownload() {
     const images = document.querySelectorAll("img:not(.instadownload)");
     for (const image of images) {
         image.addEventListener("click", (event) => {
-            if (!event.ctrlKey) return;
+            if (!event.metaKey) return;
             if (image.classList.contains("instadownloaded")) return;
             image.classList.add("instadownloaded");
             download(image.src);
@@ -46,7 +46,7 @@ function instadownload() {
     const videos = document.querySelectorAll("video");
     for (const video of videos) {
         video.addEventListener("click", (event) => {
-            if (!event.ctrlKey) return;
+            if (!event.metaKey) return;
             if (video.classList.contains("instadownloaded")) return;
             video.classList.add("instadownloaded");
             download(video.querySelector('source').src);
