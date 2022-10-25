@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         InstaLike
-// @version      2.5.0
+// @version      2.6.0
 // @description  Like bot for Instagram
 // @author       Steven
 // @match        https://www.instagram.com
@@ -28,12 +28,19 @@ function instalike() {
   let like_count = 0;
   let total_likes = localStorage.getItem("steven.bot.instalike.likes") || 0;
   let next_time = Math.random() * 10000 + 2000;
-  let like_elements = Array.from(
-    document.querySelectorAll("article div section span button svg")
-  ).filter((like_element) => (like_element.getAttribute("aria-label") == "Like" ? 1 : 0));
-  like_elements = like_elements.filter(
-    (like_element) => BLACK_LIST.indexOf(getUsername(like_element)) === -1
-  );
+  let posts = Array.from(document.querySelectorAll(
+    'main > div > section > div > div:nth-child(3) > div:nth-child(1) > div > *'
+  ));
+  let new_posts = [];
+  for (const post of posts) {
+    if (post.nodeName == "DIV") break;
+    new_posts.push(post);
+  }
+  let like_elements = new_posts
+    .map(post => post.querySelector('div section span button svg'))
+    .filter(like_element => like_element.getAttribute("aria-label") == "Like")
+    .filter(like_element => BLACK_LIST.indexOf(getUsername(like_element)) < 0);
+
   let parent, username;
   if (like_elements.length > 0) {
     parent = getParent(like_elements[0]);
