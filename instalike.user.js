@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         InstaLike
-// @version      2.6.1
+// @version      2.6.2
 // @description  Like bot for Instagram
 // @author       Steven
 // @match        https://www.instagram.com
@@ -28,7 +28,7 @@ let like_count = 0;
 let total_likes = localStorage.getItem("steven.bot.instalike.likes") || 0;
 let next_time = Math.random() * 10000 + 2000;
 let posts = Array.from(document.querySelectorAll(
-  'main > div > section > div > div:nth-child(3) > div:nth-child(1) > div > *'
+  'main > div > section > div > div:nth-child(3) > div:nth-child(1) > div > div > div > *'
 ));
 let new_posts = [];
 for (const post of posts) {
@@ -91,7 +91,7 @@ instalike,
 900000,
 {
   name: "InstaLike",
-  version: "2.6.1",
+  version: "2.6.2",
   initialDelay: 8000 + 2000 * Math.random(),
   reload: true,
   reload_url: "https://www.instagram.com",
