@@ -1,9 +1,8 @@
-// ==UserScript==
-// @name         InstaLike
-// @version      2.6.2
+// @version      2.6.3
 // @description  Like bot for Instagram
 // @author       Steven
 // @match        https://www.instagram.com
+// @match        https://www.instagram.com/?variant=past_posts
 // @require      https://cdn.jsdelivr.net/gh/steventango/instagrambots@latest/steven.bot.js
 // ==/UserScript==
 const BLACK_LIST = [
@@ -91,7 +90,7 @@ instalike,
 900000,
 {
   name: "InstaLike",
-  version: "2.6.2",
+  version: "2.6.3",
   initialDelay: 8000 + 2000 * Math.random(),
   reload: true,
   reload_url: "https://www.instagram.com",
