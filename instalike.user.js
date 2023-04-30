@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         InstaLike
-// @version      2.7.0
+// @version      2.8.0
 // @description  Like bot for Instagram
 // @author       Steven
 // @match        https://www.instagram.com
@@ -35,6 +35,8 @@ let new_posts = [];
 for (const post of posts) {
   if (post.nodeName == "UL") continue;
   if (post.nodeName != "ARTICLE") break;
+  const span = post.querySelector(':scope > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > span:nth-child(1)');
+  if (span) continue;
   new_posts.push(post);
 }
 let like_elements = new_posts
@@ -93,7 +95,7 @@ instalike,
 900000,
 {
   name: "InstaLike",
-  version: "2.7.0",
+  version: "2.8.0",
   initialDelay: 8000 + 2000 * Math.random(),
   reload: true,
   reload_url: "https://www.instagram.com",
